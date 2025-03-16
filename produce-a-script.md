@@ -1,4 +1,4 @@
-Substitute the variables inside the prompt with the following values:
+Substitute the variables in all text after the token "$BEGIN PROMPT$". with the following values:
 
 $(language)              = Powershell
 $(requirements)          =
@@ -16,13 +16,13 @@ $(includeUsageExamples)  = [YES]
 $(includeAuthor)         = [YES]
 $(includeDate)           = [YES]
 
-Omit all lines from the prompt that start with the token "- [NO]" (without quotation marks). Ignore any occurences of the token "- [YES]"
+Omit all lines from the prompt that start with the token "- [NO]" (without quotation marks). Include any lines that start with the token "- [YES]", but delete the "- [YES]" token itself.
 
 Return only the resulting prompt and no details about the substituted variables.
 
 $BEGIN PROMPT$
 
-Generate a self contained CLI script using all text after the token "$BEGIN PROMPT$".
+Generate a self contained CLI script 
 
 - Programming language: $(language)
 - Requirements on the script: $(requirements)
